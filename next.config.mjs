@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  basePath: '/websiteportfolio',
   images: {
     unoptimized: true,
     remotePatterns: [
