@@ -1,0 +1,2478 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   WELCOME TO THE 90s WEB EXPERIENCE
+   Best viewed in Netscape Navigator 4.0+
+   Resolution: 800x600
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+  /* Authentic 90s Color Palette */
+  --teal: #008080;
+  --teal-dark: #006666;
+  --hot-pink: #FF1493;
+  --lime: #32CD32;
+  --cyber-yellow: #FFD700;
+  --electric-blue: #0000FF;
+  --purple: #800080;
+  --cyan: #00CED1;
+  --silver: #C0C0C0;
+  --win95-gray: #C0C0C0;
+  --win95-dark: #808080;
+  --win95-light: #FFFFFF;
+  --win95-bg: #008080;
+}
+
+/* Classic tiled starfield background */
+body {
+  background-color: #000033;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  color: #00FF00;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* Selection style */
+::selection {
+  background: var(--hot-pink);
+  color: #FFFFFF;
+}
+
+/* Classic blue underlined links */
+a {
+  color: #FFFF00;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #FF69B4;
+}
+
+a:hover {
+  color: #00FFFF;
+  text-decoration: none;
+}
+
+/* ============================================
+   WINDOWS 95 STYLE COMPONENTS
+   ============================================ */
+
+.win95-window {
+  background: var(--silver);
+  border: 2px solid;
+  border-color: var(--win95-light) var(--win95-dark) var(--win95-dark) var(--win95-light);
+  box-shadow:
+    inset 1px 1px 0 var(--win95-light),
+    inset -1px -1px 0 #404040,
+    2px 2px 8px rgba(0,0,0,0.5);
+  padding: 2px;
+}
+
+.win95-titlebar {
+  background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
+  color: white;
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.win95-titlebar-buttons {
+  display: flex;
+  gap: 2px;
+}
+
+.win95-btn {
+  width: 16px;
+  height: 14px;
+  background: var(--silver);
+  border: 2px solid;
+  border-color: var(--win95-light) var(--win95-dark) var(--win95-dark) var(--win95-light);
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.win95-btn:active {
+  border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+}
+
+.win95-content {
+  background: white;
+  border: 2px solid;
+  border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+  padding: 10px;
+  color: #000000;
+}
+
+.win95-button {
+  background: var(--silver);
+  border: 2px solid;
+  border-color: var(--win95-light) var(--win95-dark) var(--win95-dark) var(--win95-light);
+  color: #000000;
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  font-size: 11px;
+  padding: 4px 12px;
+  cursor: pointer;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+.win95-button:hover {
+  color: #000000;
+}
+
+.win95-button:active {
+  border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+  padding: 5px 11px 3px 13px;
+}
+
+/* ============================================
+   RETRO HEADER / NAVIGATION
+   ============================================ */
+
+.retro-header {
+  background: linear-gradient(180deg, #000080 0%, #0000AA 50%, #000080 100%);
+  border-bottom: 4px ridge #C0C0C0;
+  padding: 0;
+}
+
+.retro-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.retro-logo {
+  font-family: "Comic Sans MS", "VT323", cursive;
+  font-size: 28px;
+  font-weight: bold;
+  color: #FFFF00;
+  text-shadow:
+    2px 2px 0 #FF00FF,
+    4px 4px 0 #00FFFF;
+  text-decoration: none !important;
+  animation: rainbow-glow 3s ease-in-out infinite;
+}
+
+@keyframes rainbow-glow {
+  0%, 100% { text-shadow: 2px 2px 0 #FF00FF, 4px 4px 0 #00FFFF; }
+  33% { text-shadow: 2px 2px 0 #00FFFF, 4px 4px 0 #FFFF00; }
+  66% { text-shadow: 2px 2px 0 #FFFF00, 4px 4px 0 #FF00FF; }
+}
+
+.retro-nav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.retro-nav-link {
+  background: var(--silver);
+  border: 2px solid;
+  border-color: var(--win95-light) var(--win95-dark) var(--win95-dark) var(--win95-light);
+  color: #000000 !important;
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  font-size: 11px;
+  padding: 4px 10px;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.retro-nav-link:hover {
+  background: #DFDFDF;
+}
+
+.retro-nav-link:active {
+  border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+}
+
+/* ============================================
+   MAIN PAGE LAYOUT
+   ============================================ */
+
+.retro-page {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.retro-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .retro-layout {
+    flex-direction: row;
+  }
+}
+
+.retro-sidebar {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .retro-sidebar {
+    width: 200px;
+    flex-shrink: 0;
+  }
+}
+
+.retro-main {
+  flex: 1;
+}
+
+/* ============================================
+   SIDEBAR PANELS
+   ============================================ */
+
+.retro-panel {
+  background: var(--silver);
+  border: 3px ridge #808080;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.retro-panel-title {
+  background: linear-gradient(90deg, #000080, #0066CC);
+  color: white;
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 4px 8px;
+  margin: 0;
+}
+
+.retro-panel-content {
+  padding: 10px;
+  background: #FFFFCC;
+  color: #000000;
+}
+
+.retro-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.retro-list li {
+  padding: 3px 0;
+  border-bottom: 1px dotted #808080;
+}
+
+.retro-list li:last-child {
+  border-bottom: none;
+}
+
+.retro-list a {
+  color: #0000FF !important;
+  font-family: "Times New Roman", serif;
+  font-size: 14px;
+}
+
+.retro-list a:hover {
+  color: #FF0000 !important;
+}
+
+/* Visitor Counter */
+.retro-counter {
+  background: #000000;
+  color: #00FF00;
+  font-family: "Courier New", monospace;
+  font-size: 20px;
+  padding: 5px 10px;
+  border: 3px inset #808080;
+  display: inline-block;
+  letter-spacing: 3px;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.retro-hero {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(180deg, #000066 0%, #000033 100%);
+  border: 5px ridge #C0C0C0;
+  margin-bottom: 20px;
+}
+
+.retro-hero-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .retro-hero-layout {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+  }
+}
+
+.retro-hero h1 {
+  font-family: "Comic Sans MS", "VT323", cursive;
+  font-size: 32px;
+  color: #FFFF00;
+  text-shadow:
+    3px 3px 0 #FF00FF,
+    -1px -1px 0 #00FFFF;
+  margin: 10px 0;
+  animation: title-bounce 2s ease-in-out infinite;
+}
+
+@keyframes title-bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.retro-hero-portrait {
+  width: 200px;
+  border: 5px ridge #C0C0C0;
+  background: #000000;
+  padding: 5px;
+}
+
+.retro-hero-portrait-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: pixelated;
+}
+
+/* ============================================
+   MARQUEE & BLINKING TEXT
+   ============================================ */
+
+.retro-marquee {
+  background: #000000;
+  color: #00FF00;
+  font-family: "Courier New", monospace;
+  padding: 8px;
+  border: 3px inset #808080;
+  overflow: hidden;
+  white-space: nowrap;
+  text-shadow: 0 0 5px #00FF00;
+}
+
+.retro-marquee span {
+  display: inline-block;
+  animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.retro-blink {
+  animation: blink-text 1s step-end infinite;
+  color: #FF0000;
+  font-weight: bold;
+}
+
+@keyframes blink-text {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ============================================
+   CARDS & CONTENT BOXES
+   ============================================ */
+
+.retro-card {
+  background: #FFFFCC;
+  border: 3px ridge #808080;
+  color: #000000;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.retro-card-header {
+  background: linear-gradient(90deg, var(--teal) 0%, #00AAAA 100%);
+  color: white;
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.retro-card-body {
+  padding: 15px;
+  font-family: "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+.retro-card-text {
+  color: #000000;
+}
+
+.retro-card-subtle {
+  color: #666666;
+}
+
+/* ============================================
+   BADGES & PILLS
+   ============================================ */
+
+.retro-badge {
+  background: linear-gradient(180deg, #00FF88 0%, #00CC66 100%);
+  border: 2px solid #004422;
+  color: #000000;
+  font-family: "Arial", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 8px;
+  display: inline-block;
+  text-shadow: none;
+}
+
+.retro-pill {
+  background: linear-gradient(90deg, #FF00FF 0%, #00FFFF 50%, #FF00FF 100%);
+  background-size: 200% 100%;
+  animation: pill-shimmer 3s linear infinite;
+  border: 2px outset #FF69B4;
+  color: #FFFFFF;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  text-shadow: 1px 1px 0 #000000;
+}
+
+@keyframes pill-shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.retro-button {
+  background: linear-gradient(180deg, #DFDFDF 0%, #BFBFBF 50%, #9F9F9F 100%);
+  border: 3px outset #C0C0C0;
+  color: #000000;
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 16px;
+  cursor: pointer;
+  text-decoration: none !important;
+  display: inline-block;
+  text-align: center;
+}
+
+.retro-button:hover {
+  background: linear-gradient(180deg, #EFEFEF 0%, #CFCFCF 50%, #AFAFAF 100%);
+  color: #000000;
+}
+
+.retro-button:active {
+  border-style: inset;
+  padding: 7px 15px 5px 17px;
+}
+
+.retro-button--secondary {
+  background: linear-gradient(180deg, #87CEEB 0%, #5CACEE 50%, #4682B4 100%);
+  color: #FFFFFF;
+  text-shadow: 1px 1px 0 #000000;
+}
+
+/* ============================================
+   SECTION HEADINGS
+   ============================================ */
+
+.retro-section-heading {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.retro-section-heading h2 {
+  font-family: "Comic Sans MS", "VT323", cursive;
+  font-size: 28px;
+  color: #00FFFF;
+  text-shadow: 2px 2px 0 #FF00FF;
+  margin: 0;
+}
+
+.retro-section-heading .eyebrow {
+  background: #FF00FF;
+  color: #FFFFFF;
+  font-family: "Arial", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 2px 10px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+/* ============================================
+   HR / DIVIDERS
+   ============================================ */
+
+.retro-hr {
+  border: none;
+  height: 10px;
+  background: repeating-linear-gradient(
+    90deg,
+    #FF0000,
+    #FF0000 10px,
+    #FFFF00 10px,
+    #FFFF00 20px,
+    #00FF00 20px,
+    #00FF00 30px,
+    #00FFFF 30px,
+    #00FFFF 40px,
+    #0000FF 40px,
+    #0000FF 50px,
+    #FF00FF 50px,
+    #FF00FF 60px
+  );
+  margin: 20px 0;
+}
+
+.retro-hr-stars {
+  text-align: center;
+  color: #FFFF00;
+  font-size: 20px;
+  letter-spacing: 10px;
+  margin: 20px 0;
+}
+
+/* ============================================
+   MISCELLANEOUS RETRO ELEMENTS
+   ============================================ */
+
+.retro-title {
+  font-family: "Comic Sans MS", "VT323", cursive;
+  color: #FFFF00;
+  text-shadow: 2px 2px 0 #FF00FF;
+}
+
+.retro-banner {
+  background: #FF0000;
+  color: #FFFF00;
+  font-family: "Impact", sans-serif;
+  font-size: 14px;
+  padding: 5px 15px;
+  transform: rotate(-3deg);
+  display: inline-block;
+  border: 2px solid #000000;
+  animation: banner-pulse 1s ease-in-out infinite;
+}
+
+@keyframes banner-pulse {
+  0%, 100% { transform: rotate(-3deg) scale(1); }
+  50% { transform: rotate(-3deg) scale(1.05); }
+}
+
+.retro-muted {
+  color: #CCCCCC;
+}
+
+.retro-subtle {
+  color: #999999;
+}
+
+.retro-highlight {
+  color: #FF00FF;
+  font-weight: bold;
+  text-shadow: 0 0 3px rgba(255, 0, 255, 0.5);
+}
+
+/* Under construction / Web badges */
+.retro-web-badge {
+  border: 2px outset #C0C0C0;
+  padding: 3px;
+  display: inline-block;
+  background: #000000;
+}
+
+.retro-construction {
+  background: repeating-linear-gradient(
+    45deg,
+    #FFD700,
+    #FFD700 10px,
+    #000000 10px,
+    #000000 20px
+  );
+  color: #000000;
+  font-family: "Arial Black", sans-serif;
+  font-size: 12px;
+  padding: 5px 15px;
+  border: 3px ridge #808080;
+  text-align: center;
+}
+
+/* Guestbook style */
+.retro-guestbook {
+  background: #FFFFCC;
+  border: 3px groove #008080;
+  padding: 10px;
+  font-family: "Times New Roman", serif;
+  color: #000000;
+}
+
+/* Web ring */
+.retro-webring {
+  background: #C0C0C0;
+  border: 3px ridge #808080;
+  padding: 10px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  color: #000000;
+}
+
+/* ============================================
+   ANIMATED BACKGROUNDS
+   ============================================ */
+
+.retro-body {
+  background-color: #000033;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* Fire text effect */
+.fire-text {
+  background: linear-gradient(180deg, #FF0000 0%, #FF6600 30%, #FFFF00 60%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fire-flicker 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes fire-flicker {
+  0% { filter: brightness(1); }
+  100% { filter: brightness(1.2); }
+}
+
+/* Rainbow text */
+.rainbow-text {
+  background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #8B00FF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-shift 3s linear infinite;
+  background-size: 200% auto;
+}
+
+@keyframes rainbow-shift {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 767px) {
+  .retro-hero h1 {
+    font-size: 24px;
+  }
+
+  .retro-nav {
+    justify-content: center;
+  }
+
+  .retro-sidebar {
+    order: 2;
+  }
+
+  .retro-main {
+    order: 1;
+  }
+}
+
+/* ============================================
+   CURSOR (just for fun)
+   ============================================ */
+
+* {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M0 0L12 12L6 12L8 16L6 17L4 13L0 16Z' fill='white' stroke='black'/%3E%3C/svg%3E"), auto;
+}
+
+a, button, .retro-button, .retro-nav-link, .win95-button {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Ccircle cx='6' cy='3' r='3' fill='%23FFFF00'/%3E%3Crect x='4' y='6' width='4' height='6' fill='%23FFFF00'/%3E%3Crect x='1' y='8' width='3' height='2' fill='%23FFFF00'/%3E%3Crect x='8' y='8' width='3' height='2' fill='%23FFFF00'/%3E%3Crect x='3' y='12' width='2' height='4' fill='%23FFFF00'/%3E%3Crect x='7' y='12' width='2' height='4' fill='%23FFFF00'/%3E%3C/svg%3E"), pointer;
+}
+
+/* ============================================
+   SINGLE-SCREEN FULLSCREEN LAYOUT
+   Scales to fit any viewport without scrolling.
+   Uses dvh where supported, vh as fallback.
+   ============================================ */
+
+.retro-fullscreen {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(4px, 1vh, 16px);
+}
+
+.retro-main-window {
+  width: 100%;
+  max-width: 960px;
+  height: calc(100dvh - clamp(8px, 2vh, 32px));
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.retro-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4px, 0.8vh, 10px);
+  padding: clamp(6px, 1.2vh, 14px) !important;
+  overflow: hidden;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Top row: photo + intro */
+.retro-top-row {
+  display: flex;
+  gap: clamp(8px, 1.5vw, 20px);
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.retro-portrait-mini {
+  width: clamp(60px, 10vw, 110px);
+  min-width: clamp(60px, 10vw, 110px);
+  border: 3px ridge #C0C0C0;
+  background: #000;
+  padding: 3px;
+}
+
+.retro-portrait-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.retro-intro {
+  flex: 1;
+  min-width: 0;
+}
+
+.retro-name {
+  font-size: clamp(16px, 2.5vw, 24px) !important;
+  margin: 0 0 2px 0 !important;
+}
+
+.retro-tagline {
+  font-size: clamp(9px, 1.2vw, 12px);
+  color: #666;
+  margin: 0 0 clamp(4px, 0.6vh, 10px) 0;
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+}
+
+.retro-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(2px, 0.4vw, 5px);
+}
+
+.retro-link-btn {
+  font-size: clamp(8px, 1vw, 11px) !important;
+  padding: clamp(1px, 0.3vh, 3px) clamp(4px, 0.6vw, 10px) !important;
+}
+
+/* Slim rainbow divider */
+.retro-hr-slim {
+  height: clamp(2px, 0.4vh, 5px);
+  margin: clamp(3px, 0.5vh, 8px) 0;
+  flex-shrink: 0;
+}
+
+/* Quest log section - scrolls internally if needed */
+.retro-quest-section {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  /* Retro scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #808080 #C0C0C0;
+}
+
+.retro-quest-section::-webkit-scrollbar {
+  width: 16px;
+}
+
+.retro-quest-section::-webkit-scrollbar-track {
+  background: #C0C0C0;
+  border: 1px solid #808080;
+}
+
+.retro-quest-section::-webkit-scrollbar-thumb {
+  background: #808080;
+  border: 2px outset #C0C0C0;
+}
+
+.retro-quest-title {
+  font-family: "Comic Sans MS", "VT323", cursive;
+  font-size: clamp(11px, 1.3vw, 14px);
+  color: #000;
+  margin: 0 0 clamp(3px, 0.5vh, 8px) 0;
+}
+
+.retro-quest-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3px, 0.5vh, 8px);
+}
+
+.retro-quest-entry {
+  background: #FFFFF0;
+  border: 1px solid #CCC;
+  padding: clamp(3px, 0.4vh, 6px) clamp(5px, 0.8vw, 10px);
+  font-family: "Times New Roman", serif;
+}
+
+.retro-quest-header {
+  font-size: clamp(10px, 1.2vw, 13px);
+  line-height: 1.3;
+}
+
+.retro-quest-role {
+  font-weight: bold;
+  color: #000080;
+}
+
+.retro-quest-at {
+  color: #333;
+}
+
+.retro-quest-period {
+  float: right;
+  font-size: clamp(8px, 0.9vw, 11px);
+  color: #888;
+  font-family: "Courier New", monospace;
+}
+
+.retro-quest-liner {
+  font-size: clamp(9px, 1.1vw, 12px);
+  color: #444;
+  margin: 2px 0 0 0;
+  font-style: italic;
+}
+
+/* Bottom bar */
+.retro-bottom-bar {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3px, 0.4vh, 8px);
+  flex-shrink: 0;
+}
+
+.retro-skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(2px, 0.3vw, 4px);
+  justify-content: center;
+}
+
+.retro-skills-row .retro-badge {
+  font-size: clamp(7px, 0.9vw, 10px);
+  padding: clamp(0px, 0.2vh, 2px) clamp(3px, 0.5vw, 7px);
+}
+
+.retro-marquee-slim {
+  padding: clamp(2px, 0.3vh, 5px) !important;
+  font-size: clamp(9px, 1vw, 12px);
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Tall narrow screens (phones portrait) */
+@media (max-width: 640px) {
+  .retro-top-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .retro-portrait-mini {
+    width: 70px;
+    min-width: 70px;
+    margin: 0 auto;
+  }
+
+  .retro-links-row {
+    justify-content: center;
+  }
+
+  .retro-quest-period {
+    float: none;
+    display: block;
+    margin-top: 1px;
+  }
+}
+
+/* Short screens (landscape phones, small laptops) */
+@media (max-height: 600px) {
+  .retro-main-content {
+    gap: 3px;
+    padding: 6px !important;
+  }
+
+  .retro-hr-slim {
+    height: 2px;
+    margin: 2px 0;
+  }
+
+  .retro-quest-entry {
+    padding: 2px 6px;
+  }
+
+  .retro-quest-list {
+    gap: 2px;
+  }
+
+  .retro-quest-liner {
+    font-size: 9px;
+  }
+
+  .retro-skills-row {
+    display: none;
+  }
+}
+
+/* Very short screens */
+@media (max-height: 500px) {
+  .retro-tagline {
+    display: none;
+  }
+
+  .retro-marquee-slim {
+    display: none;
+  }
+}
+
+/* ============================================
+   WIN95 DESKTOP ENVIRONMENT
+   ============================================ */
+
+.win95-desktop {
+  position: fixed;
+  inset: 0;
+  background: var(--win95-bg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.win95-desktop-area {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ============================================
+   DESKTOP ICONS
+   ============================================ */
+
+.desktop-icon-grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 4px;
+  height: 100%;
+  width: fit-content;
+  padding: 10px;
+  align-content: flex-start;
+}
+
+.desktop-icon {
+  width: 72px;
+  height: 76px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2px;
+  cursor: pointer;
+  padding: 4px;
+  border: 1px solid transparent;
+  user-select: none;
+}
+
+.desktop-icon:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.desktop-icon:focus {
+  outline: 1px dotted white;
+  outline-offset: -1px;
+}
+
+.desktop-icon--selected {
+  border: 1px dotted white;
+}
+
+.desktop-icon__image {
+  font-size: 32px;
+  line-height: 1;
+  filter: drop-shadow(1px 1px 0 rgba(0,0,0,0.5));
+}
+
+.desktop-icon__label {
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  font-size: 11px;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  word-break: break-word;
+  line-height: 1.2;
+  max-width: 68px;
+}
+
+.desktop-icon--selected .desktop-icon__label {
+  background: #000080;
+  color: white;
+}
+
+/* ============================================
+   WIN95 WINDOW (DESKTOP MODE)
+   ============================================ */
+
+.win95-window--desktop {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100% - 8px);
+}
+
+.win95-window--desktop .win95-content {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.win95-window-body {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* Inactive window titlebar */
+.win95-titlebar--inactive {
+  background: linear-gradient(90deg, #808080 0%, #b0b0b0 100%);
+}
+
+/* ============================================
+   TASKBAR
+   ============================================ */
+
+.win95-taskbar {
+  height: 30px;
+  background: var(--silver);
+  border-top: 2px solid var(--win95-light);
+  display: flex;
+  align-items: center;
+  padding: 2px 2px;
+  gap: 2px;
+  flex-shrink: 0;
+  z-index: 9999;
+}
+
+.win95-start-btn {
+  background: var(--silver);
+  border: 2px solid;
+  border-color: var(--win95-light) var(--win95-dark) var(--win95-dark) var(--win95-light);
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 1px 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 22px;
+  flex-shrink: 0;
+  color: #000;
+}
+
+.win95-start-btn:active,
+.win95-start-btn--active {
+  border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+}
+
+.win95-taskbar-divider {
+  width: 2px;
+  height: 20px;
+  border-left: 1px solid var(--win95-dark);
+  border-right: 1px solid var(--win95-light);
+  margin: 0 2px;
+}
+
+.win95-taskbar-windows {
+  flex: 1;
+  display: flex;
+  gap: 2px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.win95-taskbar-item {
+  background: var(--silver);
+  border: 2px solid;
+  border-color: var(--win95-light) var(--win95-dark) var(--win95-dark) var(--win95-light);
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  font-size: 11px;
+  padding: 1px 8px;
+  cursor: pointer;
+  height: 22px;
+  min-width: 80px;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  color: #000;
+}
+
+.win95-taskbar-item--active {
+  border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+  background: #dfdfdf;
+  font-weight: bold;
+}
+
+.win95-clock {
+  border: 2px solid;
+  border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  font-size: 11px;
+  padding: 1px 8px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: #000;
+}
+
+/* ============================================
+   START MENU
+   ============================================ */
+
+.win95-start-menu {
+  position: absolute;
+  bottom: 30px;
+  left: 2px;
+  width: 200px;
+  background: var(--silver);
+  border: 2px solid;
+  border-color: var(--win95-light) var(--win95-dark) var(--win95-dark) var(--win95-light);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+  z-index: 10000;
+  display: flex;
+}
+
+.win95-start-menu-sidebar {
+  width: 24px;
+  background: linear-gradient(180deg, #000080, #1084d0);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: white;
+  font-family: "Tahoma", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  letter-spacing: 1px;
+}
+
+.win95-start-menu-items {
+  flex: 1;
+  padding: 2px 0;
+}
+
+.win95-start-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  color: #000;
+}
+
+.win95-start-menu-item:hover {
+  background: #000080;
+  color: white;
+}
+
+.win95-start-menu-separator {
+  height: 1px;
+  background: var(--win95-dark);
+  margin: 2px 4px;
+  border-bottom: 1px solid var(--win95-light);
+}
+
+/* ============================================
+   WINDOW CONTENT STYLES
+   ============================================ */
+
+/* About window */
+.window-content-about .about-top {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.window-content-about .about-top .retro-portrait-mini {
+  width: 80px;
+  min-width: 80px;
+}
+
+.window-content-about .about-intro {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Links window rows */
+.win95-link-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 6px;
+  text-decoration: none !important;
+  border: 1px solid transparent;
+}
+
+.win95-link-row:hover {
+  background: #000080;
+}
+
+.win95-link-row:hover span {
+  color: white !important;
+}
+
+/* Skill meters */
+.skill-meter {
+  height: 14px;
+  background: var(--silver);
+  border: 2px solid;
+  border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+}
+
+.skill-meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #000080 0%, #1084d0 50%, #000080 100%);
+  background-size: 200% 100%;
+  animation: meter-shimmer 3s linear infinite;
+}
+
+@keyframes meter-shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Contact window */
+.contact-compose {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.contact-toolbar {
+  padding: 4px 6px;
+  border-bottom: 1px solid #808080;
+  margin-bottom: 4px;
+}
+
+.contact-fields {
+  border-bottom: 1px solid #808080;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+.contact-field-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 6px;
+}
+
+.contact-label {
+  font-family: "Tahoma", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000;
+  width: 50px;
+  flex-shrink: 0;
+}
+
+.contact-field-value {
+  flex: 1;
+  font-family: "Tahoma", sans-serif;
+  font-size: 12px;
+  padding: 2px 4px;
+  background: white;
+  border: 2px solid;
+  border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+}
+
+.contact-body {
+  flex: 1;
+  padding: 8px;
+  background: white;
+  border: 2px solid;
+  border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+  margin: 0 0 8px 0;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   DESKTOP RESPONSIVE
+   ============================================ */
+
+@media (max-width: 767px) {
+  .desktop-icon-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    padding: 8px;
+    gap: 2px;
+  }
+
+  .desktop-icon {
+    width: 64px;
+    height: 70px;
+  }
+
+  .desktop-icon__image {
+    font-size: 28px;
+  }
+
+  .desktop-icon__label {
+    font-size: 10px;
+  }
+
+  .win95-window--desktop {
+    left: 4px !important;
+    top: 4px !important;
+    width: calc(100% - 8px) !important;
+    height: calc(100% - 8px) !important;
+  }
+
+  .win95-start-menu {
+    width: 180px;
+  }
+}
+
+/* ============================================
+   BOOT SCREEN
+   ============================================ */
+
+.boot-screen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.boot-text {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  color: #AAA;
+  max-width: 600px;
+  padding: 40px;
+}
+
+.boot-text p {
+  margin: 4px 0;
+  animation: boot-fade-in 0.3s ease-out;
+}
+
+@keyframes boot-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.boot-progress {
+  width: 200px;
+  height: 18px;
+  border: 2px solid;
+  border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+  background: #000;
+  margin-top: 8px;
+  padding: 2px;
+}
+
+.boot-progress-bar {
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    #000080 0px,
+    #000080 8px,
+    transparent 8px,
+    transparent 12px
+  );
+  animation: boot-load 1.5s linear forwards;
+}
+
+@keyframes boot-load {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.boot-welcome {
+  font-size: 18px;
+  color: #FFF;
+  margin-top: 16px !important;
+  animation: boot-fade-in 0.5s ease-out;
+}
+
+/* ============================================
+   BSOD (Blue Screen of Death) EASTER EGG
+   ============================================ */
+
+.bsod {
+  position: fixed;
+  inset: 0;
+  background: #0000AA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  cursor: pointer;
+  padding: 40px;
+}
+
+.bsod-content {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  color: #FFF;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.bsod-title {
+  background: #AAA;
+  color: #0000AA;
+  display: inline-block;
+  padding: 0 8px;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.bsod-blink {
+  animation: blink-text 1s step-end infinite;
+}
+
+/* ============================================
+   CRT SCANLINE OVERLAY
+   ============================================ */
+
+.crt-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+}
+
+/* ============================================
+   WINDOW ANIMATIONS
+   ============================================ */
+
+.win95-window--opening {
+  animation: window-open 0.2s ease-out;
+}
+
+.win95-window--closing {
+  animation: window-close 0.15s ease-in forwards;
+}
+
+.win95-window--minimized {
+  display: none !important;
+}
+
+@keyframes window-open {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes window-close {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+}
+
+/* ============================================
+   SHUTDOWN OVERLAY / DIALOG
+   ============================================ */
+
+.shutdown-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99990;
+}
+
+.shutdown-dialog {
+  min-width: 280px;
+  max-width: 360px;
+  animation: window-open 0.2s ease-out;
+}
+
+/* ============================================
+   RIGHT-CLICK CONTEXT MENU
+   ============================================ */
+
+.win95-context-menu {
+  position: absolute;
+  background: var(--silver);
+  border: 2px solid;
+  border-color: var(--win95-light) var(--win95-dark) var(--win95-dark) var(--win95-light);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  padding: 2px 0;
+  z-index: 10001;
+  min-width: 140px;
+}
+
+.win95-context-item {
+  display: block;
+  width: 100%;
+  padding: 4px 24px 4px 10px;
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  font-size: 12px;
+  color: #000;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.win95-context-item:hover {
+  background: #000080;
+  color: white;
+}
+
+/* ============================================
+   RECYCLE BIN
+   ============================================ */
+
+.desktop-recycle-bin {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* ============================================
+   START MENU ENHANCEMENTS
+   ============================================ */
+
+.win95-start-menu-header {
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  color: #808080;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px 2px;
+  user-select: none;
+}
+
+.win95-start-menu-icon {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.win95-start-flag {
+  color: #FF0000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* ============================================
+   TASKBAR ENHANCEMENTS
+   ============================================ */
+
+.win95-taskbar-item--minimized {
+  font-style: italic;
+  color: #555;
+}
+
+.win95-titlebar-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 0;
+}
+
+/* ============================================
+   MINESWEEPER GAME
+   ============================================ */
+
+.minesweeper {
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  user-select: none;
+}
+
+.minesweeper-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--silver);
+  border: 2px solid;
+  border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+  padding: 4px 6px;
+  margin-bottom: 4px;
+}
+
+.minesweeper-counter {
+  background: #000;
+  color: #FF0000;
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border: 1px solid;
+  border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+  min-width: 36px;
+  text-align: center;
+}
+
+.minesweeper-face {
+  background: var(--silver);
+  border: 2px solid;
+  border-color: var(--win95-light) var(--win95-dark) var(--win95-dark) var(--win95-light);
+  font-size: 18px;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.minesweeper-face:active {
+  border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+}
+
+.minesweeper-board {
+  border: 3px solid;
+  border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+  background: var(--silver);
+  display: inline-block;
+}
+
+.minesweeper-row {
+  display: flex;
+}
+
+.minesweeper-cell {
+  width: 28px;
+  height: 28px;
+  background: var(--silver);
+  border: 2px solid;
+  border-color: var(--win95-light) var(--win95-dark) var(--win95-dark) var(--win95-light);
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.minesweeper-cell:active:not(:disabled) {
+  border-color: var(--win95-dark);
+  border-width: 1px;
+}
+
+.minesweeper-cell--revealed {
+  border: 1px solid #808080;
+  background: #d0d0d0;
+  cursor: default;
+}
+
+.minesweeper-cell--mine {
+  background: #FF0000;
+}
+
+/* ============================================
+   FULL RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .desktop-icon-grid {
+    gap: 2px;
+    padding: 8px;
+  }
+
+  .desktop-icon {
+    width: 68px;
+    height: 72px;
+  }
+}
+
+/* Mobile phones (< 768px) */
+@media (max-width: 767px) {
+  /* Icons flow horizontally centered at top */
+  .desktop-icon-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    padding: 8px 4px;
+    gap: 2px;
+  }
+
+  .desktop-icon {
+    width: 60px;
+    height: 66px;
+  }
+
+  .desktop-icon__image {
+    font-size: 26px;
+  }
+
+  .desktop-icon__label {
+    font-size: 9px;
+    max-width: 56px;
+  }
+
+  /* Windows go near-full-screen on mobile */
+  .win95-window--desktop {
+    left: 2px !important;
+    top: 2px !important;
+    width: calc(100% - 4px) !important;
+    height: calc(100% - 4px) !important;
+  }
+
+  /* Taskbar adjustments */
+  .win95-taskbar {
+    height: 36px;
+  }
+
+  .win95-taskbar-item {
+    min-width: 60px;
+    max-width: 120px;
+    font-size: 10px;
+    padding: 1px 4px;
+  }
+
+  .win95-start-btn {
+    font-size: 10px;
+    padding: 1px 4px;
+  }
+
+  .win95-clock {
+    font-size: 10px;
+    padding: 1px 4px;
+  }
+
+  /* Start menu responsive */
+  .win95-start-menu {
+    width: 180px;
+    bottom: 36px;
+  }
+
+  .win95-start-menu-item {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  /* Recycle bin hidden on very small screens */
+  .desktop-recycle-bin {
+    display: none;
+  }
+
+  /* Minesweeper scales down */
+  .minesweeper-cell {
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+
+  .minesweeper-counter {
+    font-size: 13px;
+    min-width: 30px;
+  }
+
+  .minesweeper-face {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+
+  /* Context menu */
+  .win95-context-menu {
+    min-width: 120px;
+  }
+
+  /* BSOD responsive */
+  .bsod {
+    padding: 20px;
+  }
+
+  .bsod-content {
+    font-size: 12px;
+  }
+}
+
+/* Very small phones (< 380px) */
+@media (max-width: 380px) {
+  .desktop-icon {
+    width: 52px;
+    height: 60px;
+  }
+
+  .desktop-icon__image {
+    font-size: 22px;
+  }
+
+  .desktop-icon__label {
+    font-size: 8px;
+    max-width: 48px;
+  }
+
+  .win95-taskbar-item {
+    min-width: 40px;
+    max-width: 80px;
+    font-size: 9px;
+  }
+
+  .minesweeper-cell {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+}
+
+/* Landscape phones */
+@media (max-height: 500px) and (max-width: 900px) {
+  .desktop-icon-grid {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: fit-content;
+    padding: 4px;
+    gap: 1px;
+  }
+
+  .desktop-icon {
+    width: 56px;
+    height: 58px;
+  }
+
+  .desktop-icon__image {
+    font-size: 22px;
+  }
+
+  .desktop-icon__label {
+    font-size: 9px;
+  }
+
+  .win95-taskbar {
+    height: 28px;
+  }
+
+  .win95-start-menu {
+    bottom: 28px;
+  }
+
+  .boot-text {
+    font-size: 12px;
+    padding: 20px;
+  }
+}
+
+/* Touch-friendly: increase tap targets */
+@media (pointer: coarse) {
+  .win95-btn {
+    width: 20px;
+    height: 18px;
+    font-size: 12px;
+  }
+
+  .win95-titlebar {
+    padding: 4px 6px;
+  }
+
+  .win95-start-menu-item {
+    padding: 8px 10px;
+    min-height: 36px;
+  }
+
+  .minesweeper-cell {
+    min-width: 28px;
+    min-height: 28px;
+  }
+}
+
+/* ============================================
+   CLIPPY ASSISTANT
+   ============================================ */
+
+.clippy-container {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  z-index: 10002;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.clippy--entering {
+  animation: clippy-bounce-in 0.5s ease-out;
+}
+
+@keyframes clippy-bounce-in {
+  0% { transform: translateY(100px) scale(0); opacity: 0; }
+  60% { transform: translateY(-10px) scale(1.1); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.clippy-bubble {
+  background: #FFFFCC;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 10px 28px 10px 12px;
+  margin-bottom: 6px;
+  max-width: 220px;
+  position: relative;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  font-size: 12px;
+  color: #000;
+  line-height: 1.4;
+}
+
+.clippy-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #FFFFCC;
+}
+
+.clippy-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 19px;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid #000;
+}
+
+.clippy-close {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #666;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.clippy-close:hover {
+  color: #000;
+}
+
+.clippy-text {
+  margin: 0;
+}
+
+.clippy-character {
+  font-size: 48px;
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+  transition: transform 0.2s;
+  animation: clippy-idle 3s ease-in-out infinite;
+}
+
+.clippy-character:hover {
+  transform: scale(1.1);
+}
+
+@keyframes clippy-idle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+/* ============================================
+   SCREENSAVER
+   ============================================ */
+
+.screensaver {
+  position: fixed;
+  inset: 0;
+  z-index: 99998;
+  cursor: none;
+  background: #000;
+}
+
+.screensaver canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.screensaver-text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Tahoma", sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+}
+
+/* ============================================
+   WALLPAPER PICKER
+   ============================================ */
+
+.wallpaper-dialog {
+  min-width: 300px;
+  max-width: 380px;
+  animation: window-open 0.2s ease-out;
+}
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.wallpaper-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 2px solid transparent;
+  background: transparent;
+  cursor: pointer;
+}
+
+.wallpaper-option:hover {
+  border-color: #000080;
+}
+
+.wallpaper-option--active {
+  border-color: #000080;
+  background: #B8D4E8;
+}
+
+.wallpaper-preview {
+  width: 72px;
+  height: 48px;
+  border: 1px solid #808080;
+}
+
+.wallpaper-name {
+  font-family: "Tahoma", sans-serif;
+  font-size: 10px;
+  color: #000;
+}
+
+/* ============================================
+   MOUSE TRAILS
+   ============================================ */
+
+.mouse-trails {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99997;
+}
+
+.mouse-trail-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #FFFF00 0%, #FF00FF 50%, transparent 100%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: trail-fade 0.4s ease-out forwards;
+}
+
+@keyframes trail-fade {
+  from { opacity: 0.8; transform: translate(-50%, -50%) scale(1); }
+  to { opacity: 0; transform: translate(-50%, -50%) scale(0.2); }
+}
+
+/* ============================================
+   SOLITAIRE WIN ANIMATION
+   ============================================ */
+
+.solitaire-win {
+  position: fixed;
+  inset: 0;
+  z-index: 99998;
+  cursor: pointer;
+}
+
+.solitaire-win canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.solitaire-win-text {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Comic Sans MS", cursive;
+  font-size: 24px;
+  color: #FFD700;
+  text-shadow: 2px 2px 0 #000;
+  pointer-events: none;
+  animation: solitaire-text-pulse 1s ease-in-out infinite;
+}
+
+@keyframes solitaire-text-pulse {
+  0%, 100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.1); }
+}
+
+/* ============================================
+   NOTEPAD WINDOW
+   ============================================ */
+
+.notepad-window {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+
+.notepad-menubar {
+  display: flex;
+  gap: 0;
+  padding: 2px 4px;
+  background: var(--silver);
+  border-bottom: 1px solid #808080;
+}
+
+.notepad-menu-item {
+  font-family: "Tahoma", sans-serif;
+  font-size: 11px;
+  color: #000;
+  padding: 2px 8px;
+  cursor: default;
+  user-select: none;
+}
+
+.notepad-menu-item:hover {
+  background: #000080;
+  color: white;
+}
+
+.notepad-textarea {
+  flex: 1;
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: "Fixedsys", "Courier New", monospace;
+  font-size: 13px;
+  padding: 4px 6px;
+  color: #000;
+  background: #FFF;
+  line-height: 1.4;
+}
+
+/* ============================================
+   COMMAND PROMPT WINDOW
+   ============================================ */
+
+.cmd-window {
+  background: #000;
+  font-family: "Courier New", "Consolas", monospace;
+  font-size: 13px;
+  padding: 6px 8px;
+  height: 320px;
+  overflow-y: auto;
+  cursor: text;
+  /* Retro scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #808080 #000;
+}
+
+.cmd-window::-webkit-scrollbar {
+  width: 14px;
+}
+
+.cmd-window::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.cmd-window::-webkit-scrollbar-thumb {
+  background: #808080;
+  border: 2px outset #C0C0C0;
+}
+
+.cmd-line {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  white-space: pre-wrap;
+  word-break: break-all;
+  line-height: 1.3;
+}
+
+.cmd-input-line {
+  display: flex;
+}
+
+.cmd-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  caret-color: currentColor;
+}
+
+/* ============================================
+   PAINT WINDOW
+   ============================================ */
+
+.paint-window {
+  display: flex;
+  flex-direction: column;
+}
+
+.paint-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 6px;
+  background: var(--silver);
+  border-bottom: 1px solid #808080;
+  flex-wrap: wrap;
+}
+
+.paint-colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  max-width: 200px;
+}
+
+.paint-color-btn {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #808080;
+  cursor: pointer;
+  padding: 0;
+}
+
+.paint-color-btn--active {
+  border: 2px solid #000;
+  outline: 1px solid #FFF;
+}
+
+.paint-tools {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.paint-size-select {
+  font-family: "Tahoma", sans-serif;
+  font-size: 10px;
+  padding: 1px 2px;
+  border: 2px solid;
+  border-color: var(--win95-dark) var(--win95-light) var(--win95-light) var(--win95-dark);
+  background: #FFF;
+}
+
+.paint-canvas {
+  width: 100%;
+  cursor: crosshair;
+  background: #FFF;
+  display: block;
+  image-rendering: pixelated;
+}
+
+/* ============================================
+   SYSTEM TRAY
+   ============================================ */
+
+.win95-tray {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0 4px;
+}
+
+.win95-tray-icon {
+  font-size: 12px;
+  cursor: default;
+  padding: 1px 2px;
+  background: transparent;
+  border: none;
+  line-height: 1;
+}
+
+button.win95-tray-icon {
+  cursor: pointer;
+}
+
+button.win95-tray-icon:hover {
+  background: #dfdfdf;
+}
+
+/* ============================================
+   START MENU SCROLLABLE (for long menus)
+   ============================================ */
+
+.win95-start-menu-items {
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #808080 #C0C0C0;
+}
+
+/* ============================================
+   RESPONSIVE: NEW FEATURES ON MOBILE
+   ============================================ */
+
+@media (max-width: 767px) {
+  .clippy-container {
+    bottom: 50px;
+    right: 10px;
+  }
+
+  .clippy-bubble {
+    max-width: 180px;
+    font-size: 11px;
+  }
+
+  .clippy-character {
+    font-size: 36px;
+  }
+
+  .notepad-window {
+    height: 250px;
+  }
+
+  .cmd-window {
+    height: 250px;
+    font-size: 11px;
+  }
+
+  .paint-canvas {
+    max-height: 200px;
+  }
+
+  .wallpaper-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wallpaper-preview {
+    width: 60px;
+    height: 40px;
+  }
+
+  .solitaire-win-text {
+    font-size: 18px;
+  }
+}
