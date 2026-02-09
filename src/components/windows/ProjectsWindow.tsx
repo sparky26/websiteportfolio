@@ -1,6 +1,6 @@
 import { site } from '@/config/site';
 
-const projects = [
+const projects: { title: string; description: string; url?: string; icon: string }[] = [
   {
     title: 'AI Predictions (Dunning-Kruger Edition)',
     description: 'An interactive exploration of AI confidence vs. actual capability. Are we in the peak of inflated expectations?',
@@ -15,9 +15,14 @@ const projects = [
   },
   {
     title: 'Master\'s Research — Medical AI',
-    description: 'Teaching machines to read doctor handwriting at Uppsala University. Published & peer-reviewed.',
+    description: 'Teaching machines to read doctor handwriting at Kyushu University, Japan. Published & peer-reviewed.',
     url: site.links.research,
     icon: '\uD83D\uDCDA',
+  },
+  {
+    title: 'Guided Buying with LLMs',
+    description: 'Research project at Uppsala University exploring LLM-powered guided buying solutions.',
+    icon: '\uD83D\uDED2',
   },
   {
     title: 'EonLex Technologies',
@@ -52,15 +57,17 @@ export function ProjectsWindow() {
                   {description}
                 </p>
               </div>
-              <a
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="win95-button"
-                style={{ fontSize: '10px', padding: '2px 10px', flexShrink: 0, marginTop: '2px' }}
-              >
-                Open
-              </a>
+              {url && (
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="win95-button"
+                  style={{ fontSize: '10px', padding: '2px 10px', flexShrink: 0, marginTop: '2px' }}
+                >
+                  Open
+                </a>
+              )}
             </div>
           </div>
         ))}
