@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { site } from '@/config/site';
 
 export function AboutWindow() {
@@ -5,10 +6,12 @@ export function AboutWindow() {
     <div className="window-content-about">
       <div className="about-top">
         <div className="retro-portrait-mini">
-          <img
+          <Image
             src="/images/cartoon-dp.png"
             alt="Sparsh Gupta"
             className="retro-portrait-img"
+            width={80}
+            height={80}
           />
         </div>
         <div className="about-intro">

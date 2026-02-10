@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { Badge } from "@/components/ui/Badge";
 import { LinkButton } from "@/components/ui/LinkButton";
@@ -82,10 +83,12 @@ export function Hero() {
                 </div>
                 <div className="win95-content p-2">
                   <figure className="retro-hero-portrait">
-                    <img
+                    <Image
                       className="retro-hero-portrait-img"
                       src="/images/cartoon-dp.png"
                       alt="Sparsh Gupta"
+                      width={150}
+                      height={150}
                     />
                   </figure>
                 </div>
